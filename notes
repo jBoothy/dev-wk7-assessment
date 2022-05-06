@@ -1,0 +1,17 @@
+Results for the extraLargeArray
+insert 642.9456 ms
+append 2.7886 ms
+Results for the tinyArry
+insert 4 μs
+append 4.5 μs
+Results for the smallArray
+insert 11.9 μs
+append 13.1 μs
+Results for the mediumArray
+insert 123.5 μs
+append 40.7 μs
+Results for the largeArray
+insert 6.7417 ms
+append 388.2 μs
+
+Runtime difference is from the behavioral difference of push and unshift. Unshift changes the entire array and the function reindexes the whole array each time. Because of this it create a new memory for each new array. Push adds to the end of the array and doesn't have to reindex the array - it just adds properties to the array.
